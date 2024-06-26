@@ -1,6 +1,6 @@
 ## Metadata Upload Forms
 
-PARADIM's data portal provides a central location to collect and validate manually entered metadata across the MIP, including associated file uploads. The ["schema" folder in the IMQCAM/uploaders GitHub repository](https://github.com/imqcam/uploader/tree/main/schema) holds several `json` files defining the schema for those metadata uploads.
+One function of the data portal is to collect and validate manually entered metadata for different aspects of the project, including associated file uploads. The ["schema" folder in the IMQCAM/uploaders GitHub repository](https://github.com/imqcam/uploader/tree/main/schema) holds several `json` files defining the schema for those metadata uploads.
 
 The files programmatically define each metadata field collected for a particular aspect of the project, possibly including bounds on allowed values. The data portal renders the schema defined in the files as "Forms" that users can access to add new entries of a particular type into the data system. New entries are validated against their defined schema in real time. Users should contact members of the data handling team if a particular option needed for an upload is missing, or if validation bounds or other aspects of the schema need to be updated to allow a new upload.
 
