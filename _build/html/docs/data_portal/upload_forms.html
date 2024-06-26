@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -383,7 +383,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-powder-details-form">“Raw Powder Details” form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eds-and-ebsd-characterization-form">“EDS and EBSD Characterization” form</a></li>
 </ul>
             </nav>
         </div>
@@ -397,20 +397,14 @@ document.write(`
                   
   <section id="metadata-upload-forms">
 <h1>Metadata Upload Forms<a class="headerlink" href="#metadata-upload-forms" title="Link to this heading">#</a></h1>
-<p>One function of the data portal is to collect and validate manually entered metadata for different aspects of the project, including associated file uploads. The <a class="reference external" href="https://github.com/imqcam/uploader/tree/main/schema">“schema” folder in the IMQCAM/uploaders GitHub repository</a> holds several <code class="docutils literal notranslate"><span class="pre">json</span></code> files defining the schema for those metadata uploads.</p>
+<p>PARADIM’s data portal provides automated file format conversion and metadata extraction from instruments files to make FAIR as seamless as possible.  In some instances, however, metadata must be manually entered. This is accomplished by schema controlled forms for validated entry in a central location. The <a class="reference external" href="https://github.com/paradimdata/documentation/tree/main/form%20schemas">“schema” folder in the documentation repo of PARADIM’s GitHub organization</a> shares these <code class="docutils literal notranslate"><span class="pre">json</span></code> schema files defining those metadata uploads.</p>
 <p>The files programmatically define each metadata field collected for a particular aspect of the project, possibly including bounds on allowed values. The data portal renders the schema defined in the files as “Forms” that users can access to add new entries of a particular type into the data system. New entries are validated against their defined schema in real time. Users should contact members of the data handling team if a particular option needed for an upload is missing, or if validation bounds or other aspects of the schema need to be updated to allow a new upload.</p>
-<p>From the <a class="reference external" href="https://data.imqcam.org/#forms">“Forms” tab</a> on the data portal website, users can click on a specific Form, which will take them to a listing of all of the existing entries for that Form (you’ll need to be logged into your data portal account to see any Forms listed). New entries can be added by clicking the green “plus sign” button in the upper right corner of the page.</p>
-<p>Completed entries are stored in the data portal, as are any files that are uploaded using the forms. Users can view and edit form entries in the data portal after they’ve been initially created, or access them programmatically as structured JSON objects using the Girder RESTful API.</p>
-<section id="raw-powder-details-form">
-<h2>“Raw Powder Details” form<a class="headerlink" href="#raw-powder-details-form" title="Link to this heading">#</a></h2>
-<p>The <a class="reference external" href="https://data.imqcam.org/#form/663e6d21b18fa1c426e939ab">Raw Powder Details upload form</a> is used to collect and validate details about raw feed powder materials including their compositions and basic properties. Users can also upload documents from manufacturers with further information about a particular batch of powder.</p>
-<p>Some details about specific fields are:</p>
-<ul class="simple">
-<li><p><strong>Raw Powder ID:</strong> This field must be unique for each entry. It should be recognizable, and probably include the name of the manufacturer, the powder material, and some identifier like the batch number from the manufacturer.</p></li>
-<li><p><strong>Additional Batch Information:</strong> These “miscellaneous” entries are simple key/value pairs for storing unvalidated details of a batch of powder. You can add anything you’d like, such as the batch number, the total weight of the batch, or a “comments” field, but know that entries here are not validated or particularly well structured.</p></li>
-<li><p><strong>Powder Composition:</strong> Each element present in the powder should be listed. The “Balance?” box should be checked for at most one element representing the remaining balance of the composition.</p></li>
-</ul>
-<p>Files uploaded along with the metadata entered in this form will be saved in the “Forms” Collection in the data portal, in the <a class="reference external" href="https://data.imqcam.org/#collection/663e6dbdb18fa1c426e939ad/folder/663e6e1ab18fa1c426e939ae">“Raw Powder Details” folder</a>.</p>
+<p>From the <a class="reference external" href="https://portal.data.paradim.org/#forms">“Forms” tab</a> on the data portal website, users can click on a specific Form, which will take them to a listing of all of their existing entries for that Form (you’ll need to be logged into your data portal account to see any Forms listed). New entries can be added by clicking the green “plus sign” button in the upper right corner of the page.</p>
+<p>Completed entries are stored in the data portal, as are any files that are uploaded using the forms. Users can view and edit form entries in the data portal after they’ve been initially created, or access them programmatically as structured JSON objects using the RESTful API.</p>
+<section id="eds-and-ebsd-characterization-form">
+<h2>“EDS and EBSD Characterization” form<a class="headerlink" href="#eds-and-ebsd-characterization-form" title="Link to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://portal.data.paradim.org/#form/663e6d21b18fa1c426e939ab">EDS and EBSD upload form</a> is used to collect and validate details about EDS and EBSD characterizations of PARADIM samples.</p>
+<p>Some details about specific fields are (in progress):</p>
 </section>
 </section>
 
@@ -478,7 +472,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-powder-details-form">“Raw Powder Details” form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eds-and-ebsd-characterization-form">“EDS and EBSD Characterization” form</a></li>
 </ul>
   </nav></div>
 
