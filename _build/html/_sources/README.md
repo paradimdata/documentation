@@ -1,9 +1,9 @@
 # PARADIM Documentation
 
 This public repository contains a [JupyterBook](https://jupyterbook.org/) for the PARADIM Data Management platform.
-It is automatically built into a Docker image using a GitHub Actions workflow.  The image
-is pushed to a public DockerHub repository, deployed onto the PARADIM cluster with Keel.sh, 
-and made available at https://docs.paradim.org. New commits made to the main branch will regenerate the live documentation.
+It is automatically built into a Docker image using a GitHub Actions workflow. The image is pushed to a public DockerHub repository and deployed under the PARADIM portal stack as https://docs.htmdec.org. 
+
+New commits made to the main branch will regenerate the live documentation.
 
 To create a new compatible conda environment:
 ```

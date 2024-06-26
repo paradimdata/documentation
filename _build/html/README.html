@@ -388,9 +388,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="paradim-documentation">
 <h1>PARADIM Documentation<a class="headerlink" href="#paradim-documentation" title="Link to this heading">#</a></h1>
 <p>This public repository contains a <a class="reference external" href="https://jupyterbook.org/">JupyterBook</a> for the PARADIM Data Management platform.
-It is automatically built into a Docker image using a GitHub Actions workflow.  The image
-is pushed to a public DockerHub repository, deployed onto the PARADIM cluster with <a class="reference external" href="http://Keel.sh">Keel.sh</a>,
-and made available at <a class="reference external" href="https://docs.paradim.org">https://docs.paradim.org</a>. New commits made to the main branch will regenerate the live documentation.</p>
+It is automatically built into a Docker image using a GitHub Actions workflow. The image is pushed to a public DockerHub repository and deployed under the PARADIM portal stack as <a class="reference external" href="https://docs.htmdec.org">https://docs.htmdec.org</a>.</p>
+<p>New commits made to the main branch will regenerate the live documentation.</p>
 <p>To create a new compatible conda environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">paradim_docs</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.10</span>
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">paradim_docs</span>
