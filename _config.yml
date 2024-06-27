@@ -3,7 +3,7 @@
 
 title: PARADIM Documentation
 author: The PARADIM Data Team
-logo: PARADIM_logo_small.png
+logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
