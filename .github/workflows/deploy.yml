@@ -1,0 +1,27 @@
+# .github/workflows/deploy.yml
+name: deploy-docs
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Build inside a ready-made container
+      - name: Build the Jupyter Book
+        uses: addnab/docker-run-action@v3
+        with:
+          image: craigwillis/jupyter-book:latest   # or build your own
+          options: -v ${{ github.workspace }}:/src
+          run: jupyter-book build --all .
+
+      # Publish _build/html → gh-pages
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
