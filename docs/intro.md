@@ -1,7 +1,14 @@
-## Welcome to the PARADIM Jupyter Book
+# Data at the Speed of Extreme Materials Discovery
 
-This documentation is built collaboratively by PARADIM staff, trainees, and users contribute content describing their work.
-The site leverages [Jupyter Book](https://github.com/executablebooks/jupyter-book) allowing teams to use MarkDown or Jupyter Notebooks to create content shared here.  
+Connecting materials data from edge-to-cloud to empower transparent, reproducible research and expand the impact of research.
 
-```{tableofcontents}
-```
+Providing seamless, integrated access to materials data to drive workflows across distributed and diverse research teams.
+* Automated data capture
+* Reproducible analysis
+* Dataset annotation and curation
+* FAIR data principles for machine-actionable and high-throughput research
+
+See also:
+* [User's Guide](users-guide-overview)
+* [Administrator's Guide](admin-guide)
+* [Architecture](architecture)
